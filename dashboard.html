@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burnly Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f5f7fb;
+        color: #1f2937;
+      }
+      .card {
+        background: white;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+        margin-bottom: 1.5rem;
+      }
+      h1,
+      h2 {
+        margin-top: 0;
+      }
+      .metrics {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .metric {
+        flex: 1;
+        min-width: 140px;
+        background: #eef2ff;
+        border-radius: 12px;
+        padding: 1rem;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Burnly</h1>
+      <p>
+        A machine learning project for predicting calories burned from
+        physiological and activity features.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Model Performance</h2>
+      <div class="metrics">
+        <div class="metric"><strong>MAE</strong><br />0.0+</div>
+        <div class="metric"><strong>RMSE</strong><br />0.0+</div>
+        <div class="metric"><strong>R² Score</strong><br />High</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Evaluation Plot</h2>
+      <img src="artifacts/evaluation_plot.png" alt="Evaluation plot" />
+    </div>
+  </body>
+</html>

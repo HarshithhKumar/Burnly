@@ -1,0 +1,1 @@
+"""Burnly package."""
