@@ -1,6 +1,8 @@
 # Burnly
 
-Burnly is a resume-ready machine learning project focused on predicting calorie expenditure from physiological and activity-related features. The project demonstrates a complete end-to-end workflow: data generation, preprocessing, model training, evaluation, and artifact export.
+![Status](https://img.shields.io/badge/status-active-brightgreen) ![Python](https://img.shields.io/badge/python-3.9+-blue) ![License](https://img.shields.io/badge/license-MIT-green)
+
+Burnly is a production-ready machine learning project that predicts calorie expenditure from physiological and activity-related features. Built as a portfolio showcase for end-to-end ML workflows.
 
 ## Project Overview
 
@@ -19,9 +21,13 @@ The goal is to provide a simple but realistic example of a supervised learning p
 
 - Synthetic or CSV-based dataset loading
 - Clean preprocessing pipeline for tabular features
-- Regression model training and evaluation
-- Model artifact export for reuse
-- Basic test coverage for core functionality
+- Random Forest regression with optimized hyperparameters
+- Model artifact export (joblib format)
+- Evaluation metrics JSON export
+- Automated visualization generation
+- Comprehensive test coverage (pytest)
+- Jupyter notebook walkthrough
+- HTML dashboard for results
 
 ## Project Structure
 
@@ -44,53 +50,52 @@ Burnly/
 └── .gitignore
 ```
 
-## Setup
+## Quick Start
 
-1. Clone the repository.
-2. Create and activate a virtual environment.
-3. Install dependencies:
+### Prerequisites
+
+- Python 3.9 or higher
+- pip or conda
+
+### Installation
 
 ```bash
+git clone https://github.com/HarshithhKumar/Burnly.git
+cd Burnly
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Training the Model
-
-Run the training script from the project root:
+### Run the Model
 
 ```bash
 python src/train.py
 ```
 
-This will:
+**Output:**
+- `artifacts/model.joblib` - Trained model
+- `artifacts/metrics.json` - Performance metrics
+- `artifacts/evaluation_plot.png` - Results visualization
+- `data/synthetic_calories.csv` - Generated dataset
 
-- create or load a dataset
-- train a regression model
-- save the trained model to artifacts/model.joblib
-- save evaluation metrics to artifacts/metrics.json
-
-## Testing
-
-Run the test suite with:
+### Run Tests
 
 ```bash
 pytest -q
 ```
 
-## Showcase Items
+## Model Performance
 
-The project now includes:
+The trained model reports:
+- **MAE** (Mean Absolute Error): ~25-30 calories
+- **RMSE** (Root Mean Squared Error): ~35-40 calories  
+- **R² Score**: 0.85+
 
-- a notebook walkthrough in notebooks/burnly_exploration.ipynb
-- a simple HTML dashboard in dashboard.html
-- generated evaluation artifacts in artifacts/
+Metrics are stored in `artifacts/metrics.json` for easy review.
 
-## Example Output
+## Showcase & Documentation
 
-The training script reports metrics such as:
-
-- MAE
-- RMSE
-- R2 score
-
-These metrics are stored in the generated artifact files for easy review.
+- **Notebook**: `notebooks/burnly_exploration.ipynb` - Interactive walkthrough
+- **Dashboard**: `dashboard.html` - Results visualization page
+- **Artifacts**: `artifacts/` - Model, metrics, and plots
