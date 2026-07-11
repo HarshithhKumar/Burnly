@@ -15,8 +15,7 @@ This project builds a regression model that estimates calories burned based on f
 - exercise duration
 - heart rate
 
-The goal is to provide a simple but realistic example of a supervised learning pipeline that can be showcased in interviews, GitHub portfolios, or resume discussions.
-
+The goal is to provide a simple but realistic example of a supervised learning pipeline.
 ## Features
 
 - Synthetic or CSV-based dataset loading
